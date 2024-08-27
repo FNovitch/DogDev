@@ -1,0 +1,507 @@
+/* Base */
+
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@400;700&family=Lato:wght@400;700&display=swap');
+:root {
+    --background:#FFF;
+    --foreground:#EBF4FF;
+    --thirdground:#FFC600;
+    --primary:#131923;
+    --secondary:#0055B8;
+    --secondary-foreground:#FFF;
+    --hero-background:#F3F3F3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Lato", sans-serif;
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--primary);
+    font-size: 1.6rem;
+}
+
+.conteiner {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+}
+.button {
+    background-color: var(--secondary);
+    color: var(--secondary-foreground);
+    padding: 2rem 4rem;
+    border-radius: 1rem;
+    text-decoration: none;
+    font-family: "Grandstander", sans-serif;
+    display: inline-block;
+    transition: transform .1s
+}
+.button:hover {
+    transform: scale(1.1);
+}
+.button2:hover {
+    transform: scale(1.1);
+}
+
+.button2 {
+    background-color: var(--background);
+    color:var(--secondary);
+    border: 1px solid var(--secondary);
+    padding: 2rem 4rem;
+    border-radius: 1rem;
+    text-decoration: none;
+    font-family: "Grandstander", sans-serif;
+    display: inline-block;
+    transition: transform .1s
+}
+
+
+/* Header */
+
+header {
+    position: sticky;
+    inset: 0 0 auto 0;
+    z-index:10;
+    box-shadow: 0 0 5px #CCC;
+    background-color: var(--background);
+}
+
+.banner {
+    display: block;
+    background-color: var(--thirdground);
+    text-align: center;
+    padding: 1rem 2rem;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+header .banner:hover {
+    font-weight: bold;
+}
+
+header .logo img {
+    width: 12rem;
+    height: auto;
+}
+
+header .area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+header .menu-opener {
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+}
+header .hamburguer {
+    display:flex;
+    height: 100%;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+header .hamburguer span {
+    display: block;
+    width: 100%;
+    height: 0.2rem;
+    background-color: var(--secondary);
+}
+header .close-icon {
+    display: none;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+header .close-icon span {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 0.2rem;
+    background-color: var(--secondary);
+}
+header .close-icon span:first-child {
+    transform: rotate(45deg);
+}
+header .close-icon span:last-child {
+    transform: rotate(-45deg);
+}
+
+header nav {
+    background-color: var(--background);
+    color: var(--secondary);
+    overflow-y: hidden;
+    max-height: 0;
+    transition: all ease .5s;
+}
+header nav.opened {
+    max-height: 100vh;
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 0 2rem;
+ 
+}
+header nav li {
+    padding:1rem 2rem;
+}
+header nav a {
+    color: var(--secondary);
+    text-decoration: none;
+    font-size: 2rem;
+}
+header nav a:hover {
+    opacity: 0.8;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+
+
+/* Hero */
+
+.hero {
+    background-image: url('../images/hero-center.png');
+    background-size: auto 40rem;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-color: var(--hero-background);
+}
+
+.hero .box {
+    padding: 4rem 2rem 28rem 2rem;
+    max-width: 60rem;
+}
+
+.hero h1 {
+    font-family:"Grandstander", sans-serif;
+    font-size: 4rem;
+    line-height: 5rem;
+}
+.hero h2 {
+    font-family:"Grandstander", sans-serif;
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 2rem 0;
+}
+.hero span {
+    color: var(--secondary);
+    font-weight: bold;
+}
+
+.hero .box a:hover {
+    opacity: 0.8;
+}
+
+
+/* Seen */
+
+.seen {
+    background-color: var(--foreground);
+    padding: 3rem;
+}
+
+.seen .conteiner {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    row-gap: 3rem;
+}
+
+.seen .conteiner div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Topics */
+
+.topics {
+    padding: 5rem 3rem;
+}
+
+.topics .topic {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-bottom: 4rem;
+}
+.topics .topic .left,
+.topics .topic .right {
+    flex:1;
+}
+
+.topics .topic .left img {
+    max-width: 100%;
+}
+.topics li {
+    font-family: "Grandstander", sans-serif;
+    font-weight: bold;
+    font-size: 4rem;
+}
+.topics ul span {
+    color: var(--secondary);
+}
+.topics p {
+    font-weight: bold;
+}
+
+.topics .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+.topics .topic a {
+    align-self:flex-start;
+}
+
+
+/* Products */
+
+.products {
+    padding: 5rem 3rem;
+}
+
+
+.products h2 {
+    font-family: "Grandstander", sans-serif;
+    font-weight: bold;
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+.products span {
+    color: var(--secondary);
+}
+
+.products .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin: 5rem 0; 
+}
+.products .product {
+    text-decoration: none;
+    box-shadow: 0 0 3px rgb(0, 0, 0, 0.5);
+    border-radius: 1rem;
+    overflow: hidden;
+    display: flex;
+    background-color: var(--background);
+    color: var(--primary);
+}
+
+.products .product .image {
+    width: 12rem;
+    min-height: 15rem;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.products .product .info {
+    flex:1;
+    padding: 2rem;
+}
+
+.products .product .title {
+    font-family: "Grandstander", sans-serif;
+    font-weight: bold;
+    padding: 1rem 0;
+    font-size: 2rem;
+}
+.products .product .link {
+    color: var(--secondary);
+    padding: 1rem 0;
+    font-weight: bold;
+    display: none;
+}
+
+
+
+/* Newsletter */
+
+.newsletter {
+    padding: 5rem 3rem;
+    background-color: var(--foreground);
+    margin-top: 10rem;
+}
+.newsletter h2 {
+    font-family: "Grandstander", sans-serif;
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.newsletter h2 span {
+    color: var(--secondary);
+}
+.newsletter form {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.newsletter input {
+    flex: 1;
+    padding: 2rem;
+    font-size: 2rem;
+    border-radius: 1.5rem;
+    border: 1px solid var(--secondary);
+    background-color: var(--foreground);
+}
+
+.newsletter form .button {
+    padding: 2rem 6rem;
+}
+
+
+/* Footer */
+
+.footer {
+    margin-top: 5rem;
+}
+
+.footer .conteiner {
+    padding: 0 3rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap:2rem;       
+}
+
+.footer nav p {
+    font-weight: bold;
+    margin: 2rem 0;
+}
+
+.footer nav li {
+    margin: 1rem 0 ;
+}
+.footer nav a {
+    text-decoration: none;
+    color: var(--secondary);
+}
+
+.footer nav a:hover {
+    text-decoration: underline;
+}
+
+.footer .bar {
+    background-color: var(--foreground);
+    text-align: center;
+    padding: 1rem 3rem;
+    margin-top: 5rem;
+    font-weight: bold;
+}
+
+
+
+/* Media */
+
+@media (width > 600px) {
+    .seen .conteiner {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .topics .topic {
+        flex-direction: row;
+    }
+    
+    .topics button {
+        width: auto;
+    }
+    .topics li {
+        font-size: 5rem;
+    }
+    .topics .topic.reverse {
+        flex-direction: row-reverse;
+    }
+
+    .products .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .products .product {
+        flex-direction: column;
+    }
+
+    .products .product  .image {
+        width: 100%;
+        min-height: 20rem;
+    }
+
+    .products .product .link {
+        display: block;
+    }
+    .newsletter form {
+        flex-direction: row;
+        max-width: 60rem;
+    }
+
+    .footer .conteiner {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+}
+
+@media (width > 900px) {
+    
+    header .menu-opener {
+        display: none;
+    }
+
+    header .conteiner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header nav {
+        max-height:100vh;
+    }
+
+    header nav ul{
+        flex-direction: row;
+        padding-bottom: 0;
+        
+    }
+
+    header nav li {
+        padding: 0;
+        margin-right:2rem;
+
+    }
+
+    header nav a {
+        font-size: 1.5rem;
+    }
+
+    .hero {
+        background-image: url('../images/hero.png');
+        background-size: auto;
+    }
+    .hero .box {
+        padding: 15rem 2rem;
+    }
+
+    .products .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .footer .conteiner {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
