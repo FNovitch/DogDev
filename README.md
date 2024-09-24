@@ -14,6 +14,7 @@ estou aberto para críticas e sugestões de melhoria.
 - ``HTML``
 - ``CSS``
 - ``JavaScript``
+- ``TypeScript``
 - ``Figma``
 - ``Responsividade``
 <br>
