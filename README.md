@@ -4,12 +4,12 @@
 </p>
 <br>
 <br>
-<h4 align="center">Resumo do Projeto</h4>
-Meu primeiro projeto pessoal, sendo totalmente responsivo , visando a prática com HTML, CSS e um pouco de JavaScript e
-estou aberto para críticas e sugestões de melhoria.
+<h3 align="center">Resumo do Projeto</h3>
+<h6>Meu primeiro projeto pessoal, sendo totalmente responsivo , visando a prática com HTML, CSS e um pouco de JavaScript e
+estou aberto para críticas e sugestões de melhoria.</h6>
 <br>
 <br>
-✔️ Técnicas e tecnologias utilizadas
+<h5>✔️ Técnicas e tecnologias utilizadas</h5>
 
 - ``HTML``
 - ``CSS``
