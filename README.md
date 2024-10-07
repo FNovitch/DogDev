@@ -11,11 +11,12 @@ estou aberto para críticas e sugestões de melhoria.</h6>
 <br>
 <h5>✔️ Técnicas e tecnologias utilizadas</h5>
 
-- ``HTML``
-- ``CSS``
-- ``JavaScript``
-- ``TypeScript``
-- ``Figma``
-- ``Responsividade``
-<br>
-https://dogdev-fnovitchs-projects.vercel.app/
+- `HTML`
+- `CSS`
+- `JavaScript`
+- `TypeScript`
+- `Responsividade`
+  <br>
+
+<h6>Veja o deploy do projeto abaixo!!</h6>
+ <a href="https://dogdev-fnovitchs-projects.vercel.app/" target="_blank"><em>Clique aqui</em></a>
