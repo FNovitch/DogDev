@@ -1,29 +1,44 @@
 "use strict";
-let menuOpener = document.querySelector(".menu-opener");
-let nav = document.querySelector("header nav");
-if (menuOpener) {
-    menuOpener.addEventListener("click", () => {
-        if (nav === null || nav === void 0 ? void 0 : nav.classList.contains("opened")) {
-            nav.classList.remove("opened");
-            const closeIcon = menuOpener === null || menuOpener === void 0 ? void 0 : menuOpener.querySelector(".close-icon");
-            const hamburguer = menuOpener === null || menuOpener === void 0 ? void 0 : menuOpener.querySelector(".hamburguer");
-            if (closeIcon) {
-                closeIcon.style.display = "none";
-            }
-            if (hamburguer) {
-                hamburguer.style.display = "flex";
-            }
+const menuToggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector(".site-nav");
+const navLinks = document.querySelectorAll(".site-nav a");
+const closeMenu = () => {
+    if (!menuToggle || !nav) {
+        return;
+    }
+    menuToggle.classList.remove("is-open");
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute("aria-label", "Abrir menu");
+    nav.classList.remove("is-open");
+};
+const openMenu = () => {
+    if (!menuToggle || !nav) {
+        return;
+    }
+    menuToggle.classList.add("is-open");
+    menuToggle.setAttribute("aria-expanded", "true");
+    menuToggle.setAttribute("aria-label", "Fechar menu");
+    nav.classList.add("is-open");
+};
+if (menuToggle && nav) {
+    menuToggle.addEventListener("click", () => {
+        const isOpen = nav.classList.contains("is-open");
+        if (isOpen) {
+            closeMenu();
+            return;
         }
-        else {
-            nav === null || nav === void 0 ? void 0 : nav.classList.add("opened");
-            const closeIcon = menuOpener === null || menuOpener === void 0 ? void 0 : menuOpener.querySelector(".close-icon");
-            const hamburguer = menuOpener === null || menuOpener === void 0 ? void 0 : menuOpener.querySelector(".hamburguer");
-            if (closeIcon) {
-                closeIcon.style.display = "none";
+        openMenu();
+    });
+    navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+            if (window.innerWidth < 960) {
+                closeMenu();
             }
-            if (hamburguer) {
-                hamburguer.style.display = "flex";
-            }
+        });
+    });
+    window.addEventListener("resize", () => {
+        if (window.innerWidth >= 960) {
+            closeMenu();
         }
     });
 }

@@ -1,245 +1,295 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./src/css/style.css" />
     <link rel="icon" type="image/x-icon" href="./src/images/icons8-dog-jump-30.png" />
-    <title>PetDev</title>
+    <title>DogDev</title>
   </head>
   <body>
-    <header>
-      <a href="" class="banner">Economize! Ganhe 51% OFF no seu primeiro pedido e uma tijela de brinde!!</a>
+    <header class="site-header">
+      <a href="#planos" class="promo-banner">Primeiro pedido com 51% OFF, entrega gratuita e tigela de boas-vindas.</a>
 
-      <div class="conteiner">
-        <div class="area">
-          <div class="logo">
-            <a href=""><img src="./src/images/logo.png" alt="Logo DogDev" /></a>
-          </div>
-          <div class="menu-opener">
-            <div class="hamburguer">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-            <div class="close-icon">
-              <span></span>
-              <span></span>
-            </div>
-          </div>
-        </div>
-        <nav>
+      <div class="container header-shell">
+        <a href="#" class="brand" aria-label="DogDev, voltar ao topo">
+          <img src="./src/images/logo.png" alt="Logo da DogDev" />
+        </a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav id="site-nav" class="site-nav" aria-label="Navegação principal">
           <ul>
-            <li><a href="">Produtos</a></li>
-            <li><a href="">Acessórios</a></li>
-            <li><a href="">Depoimentos</a></li>
-            <li><a href="">Minha Conta</a></li>
-            <li><a href="" class="bold">Compre Agora</a></li>
+            <li><a href="#beneficios">Benefícios</a></li>
+            <li><a href="#processo">Como funciona</a></li>
+            <li><a href="#produtos">Produtos</a></li>
+            <li><a href="#newsletter">Novidades</a></li>
+            <li><a href="#planos" class="nav-cta">Criar plano</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <section class="hero">
-      <div class="conteiner">
-        <div class="box">
-          <h1>COMIDA DE VERDADE<span> FEITA PARA SEU DOG!</span></h1>
-          <h2>Pedidos personalizados - Pronto para comer - Entrega grátis</h2>
-          <a href="" class="button">Crie seu Plano</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="seen">
-      <div class="conteiner">
-        <div><img src="./src/images/cbs.svg" alt="Logo da CBS" /></div>
-        <div><img src="./src/images/sharktank.svg" alt="Logo do Sharktank" /></div>
-        <div><img src="./src/images/forbes.svg" alt="Logo da Forbes" /></div>
-        <div><img src="./src/images/fox.svg" alt="Logo da Fox" /></div>
-      </div>
-    </section>
-
-    <section class="topics conteiner">
-      <div class="topic">
-        <div class="left">
-          <img src="./src/images/t1.jpg" alt="Imagem de um homem, mulher e cachorro se divertindo" />
-        </div>
-        <div class="right">
-          <p>Por que pais de pet escolhem DogDev:</p>
-          <ul>
-            <li><span>Comem felizes</span></li>
-            <li>Peso equilibrado</li>
-            <li><span>Vida saudável</span></li>
-            <li>Pelo brilhante</li>
-            <li><span>Menos idas ao vet</span></li>
-            <li>Mais energia</li>
-          </ul>
-          <a href="" class="button">Compre agora </a>
-        </div>
-      </div>
-
-      <div class="topic reverse">
-        <div class="left">
-          <img src="./src/images/t2.jpg" alt="Imagem de comidas saudáveis para cachorro" />
-        </div>
-        <div class="right">
-          <ul>
-            <li>
-              Receitas feitas por vets com ingredientes reais e frescos feito na
-              <span><br />Cozinha dos humanos</span>
-            </li>
-          </ul>
-          <p>
-            Nós oferecemos comida para dogs excepcionais, com ingredientes excepcionais para dar soluções nutricionais
-            de qualidade incontestável.
-          </p>
-          <a href="" class="button2">Compre agora </a>
-        </div>
-      </div>
-
-      <div class="topic">
-        <div class="left">
-          <img src="./src/images/t3.jpg" alt="Uma mulher segurando uma caixa da DogDev e um cachorro cheirando" />
-        </div>
-        <div class="right">
-          <ul>
-            <li>Personalizado</li>
-            <li><span>Preparado</span></li>
-            <li>Entregue.</li>
-          </ul>
-          <p>
-            Escolha as características únicas do seu dog e nós vamos formular o plano alimentar perfeito e nutritivo,
-            entregue na sua porta.
-          </p>
-          <a href="" class="button2">Entender como funciona</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="products">
-      <h2>Nossos <span>Produtos</span></h2>
-      <p class="bold">
-        Aqui você pode comprar várias receitas, petiscos e acessórios. Perfeito para testar o gosto e oferecer ao seu
-        dog uma variedade de sabores. Cuida pai de pet!!
-      </p>
-      <div class="grid">
-        <a href="" class="product">
-          <div class="image" style="background-image: url(/src/images/comida-1.png)"></div>
-          <div class="info">
-            <p class="title">Comida Cozinhada</p>
-            <p class="description">
-              Delicadamente cozinhado para obter a textura e o sabor suculentos que os dogs apreciam e para preservar os
-              nutrientes vitais que necessitam.
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Nutrição personalizada para cães</p>
+            <h1>Comida de verdade, com uma experiência simples para quem cuida bem.</h1>
+            <p class="hero-text">
+              Planos feitos sob medida, receitas frescas e entregas recorrentes para reduzir esforço no dia a dia e
+              aumentar a confiança na alimentação do seu dog.
             </p>
-            <p class="link">Saiba mais</p>
-          </div>
-        </a>
 
-        <a href="" class="product">
-          <div class="image" style="background-image: url(/src/images/comida-2.png)"></div>
-          <div class="info">
-            <p class="title">Comida Assada</p>
-            <p class="description">
-              Assado lentamente para obter o sabor que os filhotes desejam e para preservar os nutrientes vitais de que
-              necessitam.
+            <div class="hero-actions" id="planos">
+              <a href="#produtos" class="button button-primary">Montar plano</a>
+              <a href="#processo" class="button button-secondary">Entender o processo</a>
+            </div>
+
+            <ul class="hero-highlights" aria-label="Diferenciais da DogDev">
+              <li>Receitas formuladas com apoio veterinário</li>
+              <li>Entrega recorrente com ajuste fácil de plano</li>
+              <li>Ingredientes frescos e porções personalizadas</li>
+            </ul>
+          </div>
+
+          <div class="hero-visual">
+            <img src="./src/images/hero-center.png" alt="Cachorro usando um cachecol ao lado de alimentos naturais" />
+            <div class="hero-card">
+              <strong>+8 mil refeições entregues</strong>
+              <span>Fluxo enxuto, recompra fácil e rotina mais previsível para tutores.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="brand-strip" aria-label="Marcas e imprensa">
+        <div class="container brand-strip-grid">
+          <img src="./src/images/cbs.svg" alt="Logo da CBS" />
+          <img src="./src/images/sharktank.svg" alt="Logo do Shark Tank" />
+          <img src="./src/images/forbes.svg" alt="Logo da Forbes" />
+          <img src="./src/images/fox.svg" alt="Logo da Fox" />
+        </div>
+      </section>
+
+      <section class="section" id="beneficios">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Benefícios</p>
+            <h2>Uma interface mais clara começa com uma proposta mais clara.</h2>
+            <p>
+              Reorganizamos a narrativa da marca para destacar confiança, praticidade e resultado, sem excesso de
+              elementos competindo entre si.
             </p>
-            <p class="link">Saiba mais</p>
           </div>
-        </a>
 
-        <a href="" class="product">
-          <div class="image" style="background-image: url(/src/images/comida-3.png)"></div>
-          <div class="info">
-            <p class="title">Acessórios</p>
-            <p class="description">
-              Formulado pelo veterinário para atender a uma variedade de necessidades de saúde e bem estar.
+          <div class="benefit-grid">
+            <article class="benefit-card">
+              <h3>Mais clareza</h3>
+              <p>Mensagens curtas, escaneáveis e com uma hierarquia visual previsível em todas as seções.</p>
+            </article>
+            <article class="benefit-card">
+              <h3>Mais consistência</h3>
+              <p>Botões, cards, espaços e cores seguem o mesmo sistema visual para reduzir atrito cognitivo.</p>
+            </article>
+            <article class="benefit-card">
+              <h3>Mais confiança</h3>
+              <p>Prova social, benefícios e fluxo de compra aparecem no momento certo, sem poluição visual.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section split-section" id="processo">
+        <div class="container split-grid">
+          <div class="split-visual">
+            <img src="./src/images/t1.jpg" alt="Tutor com cachorro em momento de cuidado e bem-estar" />
+          </div>
+
+          <div class="split-copy">
+            <p class="eyebrow">Por que escolher a DogDev</p>
+            <h2>Uma jornada simples, humana e pensada para gerar confiança.</h2>
+            <ul class="feature-list">
+              <li>Planos personalizados conforme porte, rotina e objetivo nutricional.</li>
+              <li>Receitas preparadas com ingredientes reconhecíveis e comunicação transparente.</li>
+              <li>Gestão de assinatura e recompra com menos fricção em mobile e desktop.</li>
+            </ul>
+            <a href="#newsletter" class="button button-secondary">Receber novidades</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section split-section soft-surface">
+        <div class="container split-grid reverse">
+          <div class="split-visual">
+            <img src="./src/images/t2.jpg" alt="Alimentos naturais preparados para cães" />
+          </div>
+
+          <div class="split-copy">
+            <p class="eyebrow">Ingredientes e processo</p>
+            <h2>Receitas frescas, linguagem direta e foco no que realmente importa.</h2>
+            <p>
+              A apresentação foi simplificada para comunicar qualidade nutricional sem recorrer a excesso de cor,
+              tipografia decorativa ou blocos longos demais.
             </p>
-            <p class="link">Saiba mais</p>
+            <div class="mini-metrics">
+              <div>
+                <strong>100%</strong>
+                <span>ingredientes reconhecíveis</span>
+              </div>
+              <div>
+                <strong>3 passos</strong>
+                <span>para montar o plano ideal</span>
+              </div>
+            </div>
           </div>
-        </a>
+        </div>
+      </section>
 
-        <a href="" class="product">
-          <div class="image" style="background-image: url(/src/images/comida-4.png)"></div>
-          <div class="info">
-            <p class="title">Petiscos</p>
-            <p class="description">Natural, certificado e rico em proteínas para agradar seu doguinho.</p>
-            <p class="link">Saiba mais</p>
+      <section class="section split-section">
+        <div class="container split-grid">
+          <div class="split-visual">
+            <img src="./src/images/t3.jpg" alt="Entrega da DogDev chegando à casa do cliente" />
           </div>
-        </a>
-      </div>
-    </section>
 
-    <section class="seen">
-      <div class="conteiner">
-        <div><img src="./src/images/cbs.svg" alt="Logo da CBS" /></div>
-        <div><img src="./src/images/sharktank.svg" alt="Logo do Sharktank" /></div>
-        <div><img src="./src/images/forbes.svg" alt="Logo da Forbes" /></div>
-        <div><img src="./src/images/fox.svg" alt="Logo da Fox" /></div>
-      </div>
-    </section>
+          <div class="split-copy">
+            <p class="eyebrow">Como funciona</p>
+            <h2>Personalizado, preparado e entregue sem ruído no caminho.</h2>
+            <ol class="process-list">
+              <li>Você informa o perfil do seu dog e os objetivos do plano.</li>
+              <li>A DogDev sugere porções, frequência e receitas recomendadas.</li>
+              <li>O pedido chega pronto para servir, com ajustes simples quando necessário.</li>
+            </ol>
+            <a href="#produtos" class="button button-primary">Ver produtos</a>
+          </div>
+        </div>
+      </section>
 
-    <section class="newsletter">
-      <div class="conteiner">
-        <h2>Se inscreva para <span>novidades</span></h2>
-        <p class="bold">
-          Receba acesso exclusivo a ofertas especiais, promoções, atualizações de produtos, novidades e muito mais.
-        </p>
-        <form method="post">
-          <input type="email" placeholder="Digite o seu e-mail" />
-          <a href="" class="button">Enviar</a>
-        </form>
-      </div>
-    </section>
+      <section class="section" id="produtos">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Catálogo</p>
+            <h2>Produtos organizados em cards mais limpos e fáceis de comparar.</h2>
+            <p>
+              Reduzimos sombras pesadas, melhoramos a leitura das descrições e tornamos os pontos de ação mais
+              previsíveis.
+            </p>
+          </div>
 
-    <footer class="footer">
-      <div class="conteiner">
-        <nav>
+          <div class="product-grid">
+            <a href="#" class="product-card">
+              <div class="product-image">
+                <img src="./src/images/comida-1.png" alt="Linha de comida cozinhada DogDev" />
+              </div>
+              <div class="product-content">
+                <p class="product-kicker">Linha principal</p>
+                <h3>Comida cozinhada</h3>
+                <p>Textura suculenta, preparo delicado e retenção de nutrientes essenciais para o dia a dia.</p>
+                <span>Saiba mais</span>
+              </div>
+            </a>
+
+            <a href="#" class="product-card">
+              <div class="product-image">
+                <img src="./src/images/comida-2.png" alt="Linha de comida assada DogDev" />
+              </div>
+              <div class="product-content">
+                <p class="product-kicker">Textura crocante</p>
+                <h3>Comida assada</h3>
+                <p>Assada lentamente para unir sabor, praticidade e preservação dos nutrientes importantes.</p>
+                <span>Saiba mais</span>
+              </div>
+            </a>
+
+            <a href="#" class="product-card">
+              <div class="product-image">
+                <img src="./src/images/comida-3.png" alt="Linha de acessórios e suplementos DogDev" />
+              </div>
+              <div class="product-content">
+                <p class="product-kicker">Complementos</p>
+                <h3>Acessórios e suporte</h3>
+                <p>Itens de apoio pensados para saúde, rotina de alimentação e bem-estar contínuo.</p>
+                <span>Saiba mais</span>
+              </div>
+            </a>
+
+            <a href="#" class="product-card">
+              <div class="product-image">
+                <img src="./src/images/comida-4.png" alt="Linha de petiscos naturais DogDev" />
+              </div>
+              <div class="product-content">
+                <p class="product-kicker">Recompensa natural</p>
+                <h3>Petiscos</h3>
+                <p>Opções com alto valor proteico e comunicação mais direta para facilitar a escolha.</p>
+                <span>Saiba mais</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section newsletter-section" id="newsletter">
+        <div class="container newsletter-shell">
+          <div>
+            <p class="eyebrow">Novidades</p>
+            <h2>Receba lançamentos, promoções e conteúdo útil sem exageros.</h2>
+            <p>O bloco de captação foi simplificado para aumentar foco, contraste e facilidade de preenchimento.</p>
+          </div>
+
+          <form class="newsletter-form" method="post">
+            <label class="sr-only" for="newsletter-email">Seu e-mail</label>
+            <input id="newsletter-email" type="email" placeholder="Digite seu e-mail" />
+            <button type="submit" class="button button-primary">Assinar</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <img src="./src/images/logo.png" alt="Logo da DogDev" />
+          <p>Nutrição natural com uma experiência digital mais leve, objetiva e confiável.</p>
+        </div>
+
+        <nav aria-label="Produtos">
           <p>Produtos</p>
           <ul>
-            <li><a href="">Frango Frito</a></li>
-            <li><a href="">Bife do Oião</a></li>
-            <li><a href="">Lombo Fresco</a></li>
-            <li><a href="">Peru Premium</a></li>
-            <li><a href="">Prato Pernalizado</a></li>
+            <li><a href="#produtos">Comida cozinhada</a></li>
+            <li><a href="#produtos">Comida assada</a></li>
+            <li><a href="#produtos">Acessórios</a></li>
+            <li><a href="#produtos">Petiscos</a></li>
           </ul>
         </nav>
 
-        <nav>
-          <p>Sobre</p>
+        <nav aria-label="Empresa">
+          <p>Empresa</p>
           <ul>
-            <li><a href="">Nosso Processo</a></li>
-            <li><a href="">Como Funciona</a></li>
-            <li><a href="">Veja sobre Nós</a></li>
-            <li><a href="">Carreira</a></li>
-            <li><a href="">Presentes</a></li>
+            <li><a href="#processo">Como funciona</a></li>
+            <li><a href="#beneficios">Benefícios</a></li>
+            <li><a href="#newsletter">Novidades</a></li>
+            <li><a href="#">Minha conta</a></li>
           </ul>
         </nav>
 
-        <nav>
-          <p>Comunidade</p>
-          <ul>
-            <li><a href="">Blog</a></li>
-            <li><a href="">DogDev Club</a></li>
-            <li><a href="">Instagram</a></li>
-            <li><a href="">X (Twitter)</a></li>
-            <li><a href="">TikTok</a></li>
-          </ul>
-        </nav>
-
-        <nav>
+        <nav aria-label="Suporte">
           <p>Suporte</p>
           <ul>
-            <li><a href="">contato@xogdev.com.br</a></li>
-            <li><a href="">(11) 99999-9999</a></li>
-            <li><a href="">Minha Conta</a></li>
-            <li><a href="">Política de Privacidade</a></li>
-            <li><a href="">Termos de uso</a></li>
+            <li><a href="mailto:contato@dogdev.com.br">contato@dogdev.com.br</a></li>
+            <li><a href="tel:+5511999999999">(11) 99999-9999</a></li>
+            <li><a href="#">Política de privacidade</a></li>
+            <li><a href="#">Termos de uso</a></li>
           </ul>
         </nav>
       </div>
 
-      <div class="bar">DogDev - Todos os direitos reservados</div>
+      <div class="footer-bar">DogDev. Todos os direitos reservados.</div>
     </footer>
+
+    <script type="text/javascript" src="./dist/script.js"></script>
   </body>
-  <script type="text/javascript" src="./dist/script.js"></script>
 </html>

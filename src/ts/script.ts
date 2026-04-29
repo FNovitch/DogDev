@@ -1,29 +1,54 @@
-type HTMLEl = HTMLElement | null;
+type NullableElement = HTMLElement | null;
 
-let menuOpener: HTMLEl = document.querySelector(".menu-opener");
-let nav = document.querySelector("header nav");
-if (menuOpener) {
-  menuOpener.addEventListener("click", () => {
-    if (nav?.classList.contains("opened")) {
-      nav.classList.remove("opened");
-      const closeIcon = menuOpener?.querySelector(".close-icon") as HTMLEl;
-      const hamburguer = menuOpener?.querySelector(".hamburguer") as HTMLEl;
-      if (closeIcon) {
-        closeIcon.style.display = "none";
+const menuToggle = document.querySelector(".menu-toggle") as NullableElement;
+const nav = document.querySelector(".site-nav") as NullableElement;
+const navLinks = document.querySelectorAll(".site-nav a");
+
+const closeMenu = () => {
+  if (!menuToggle || !nav) {
+    return;
+  }
+
+  menuToggle.classList.remove("is-open");
+  menuToggle.setAttribute("aria-expanded", "false");
+  menuToggle.setAttribute("aria-label", "Abrir menu");
+  nav.classList.remove("is-open");
+};
+
+const openMenu = () => {
+  if (!menuToggle || !nav) {
+    return;
+  }
+
+  menuToggle.classList.add("is-open");
+  menuToggle.setAttribute("aria-expanded", "true");
+  menuToggle.setAttribute("aria-label", "Fechar menu");
+  nav.classList.add("is-open");
+};
+
+if (menuToggle && nav) {
+  menuToggle.addEventListener("click", () => {
+    const isOpen = nav.classList.contains("is-open");
+
+    if (isOpen) {
+      closeMenu();
+      return;
+    }
+
+    openMenu();
+  });
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      if (window.innerWidth < 960) {
+        closeMenu();
       }
-      if (hamburguer) {
-        hamburguer.style.display = "flex";
-      }
-    } else {
-      nav?.classList.add("opened");
-      const closeIcon = menuOpener?.querySelector(".close-icon") as HTMLEl;
-      const hamburguer = menuOpener?.querySelector(".hamburguer") as HTMLEl;
-      if (closeIcon) {
-        closeIcon.style.display = "none";
-      }
-      if (hamburguer) {
-        hamburguer.style.display = "flex";
-      }
+    });
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth >= 960) {
+      closeMenu();
     }
   });
 }
