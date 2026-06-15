@@ -1,100 +1,82 @@
-﻿<h1 align="center">DogDev</h1>
-<p align="center">
-  <img
-    loading="lazy"
-    src="https://img.shields.io/static/v1?label=STATUS&message=%20CONCLUIDO&color=GREEN&style=for-the-badge"
-  />
-</p>
+# DogDev
 
-<p align="center">
-  Landing page responsiva para uma marca ficticia de alimentacao pet, com foco em
-  apresentacao visual, marketing digital e experiencia do usuario.
-</p>
+![Status](https://img.shields.io/badge/status-concluido-16a34a?style=for-the-badge)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572b6?style=for-the-badge&logo=css3&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?style=for-the-badge&logo=typescript&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-deploy-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
-## Sobre o projeto
+DogDev e uma landing page responsiva para uma marca ficticia de alimentacao pet, com foco em apresentacao visual, marketing digital e experiencia do usuario.
 
-O **Dog Dev** e um projeto de portifolio criado para praticar desenvolvimento
-front-end com foco em estrutura de landing page, composicao visual, responsividade
-e interacao basica com `JavaScript` e `TypeScript`.
+O projeto foi criado para praticar estrutura semantica, CSS responsivo e interacoes simples com TypeScript.
 
-A proposta do projeto e apresentar uma marca ficticia de produtos para cachorros
-em uma interface moderna, com secoes de destaque, produtos, beneficios,
-newsletter e navegacao adaptada para diferentes tamanhos de tela.
+## Visao Geral
+
+- Landing page promocional para marca pet.
+- Hero section com chamada de conversao.
+- Menu responsivo para mobile.
+- Secoes de beneficios, produtos e prova social.
+- Newsletter visual para captura de contato.
+- Layout adaptado para desktop e mobile.
+
+## Tecnologias
+
+- HTML5
+- CSS3
+- JavaScript
+- TypeScript
 
 ## Funcionalidades
 
-- Landing page promocional para marca pet
-- Hero section com chamada principal de conversao
-- Menu responsivo para navegacao mobile
-- Secoes de beneficios, produtos e prova social
-- Newsletter com formulario visual de captura
-- Layout responsivo para desktop e mobile
-- Estrutura visual voltada para apresentacao comercial
+- Navegacao responsiva.
+- Interface comercial para apresentacao de produto.
+- Blocos de conteudo organizados para leitura rapida.
+- Comportamento visual controlado por TypeScript.
+- Estrutura simples para deploy estatico.
 
-## Tecnologias utilizadas
+## Estrutura
 
-- `HTML5`
-- `CSS3`
-- `JavaScript`
-- `TypeScript`
-
-## Estrutura do projeto
-
-```text
-DogDev/
-|- dist/
-|- src/
-|  |- css/
-|  |- images/
-|  |- ts/
-|- index.html
-|- README.md
-|- tsconfig.json
+```bash
+.
+├── dist
+├── src
+│   ├── css
+│   ├── images
+│   └── ts
+├── index.html
+├── tsconfig.json
+└── README.md
 ```
 
-## Arquitetura atual
+## Como Rodar
 
-O projeto segue uma estrutura front-end simples, separando interface, estilos,
-assets e comportamento da pagina.
+### Pre-requisitos
 
-### Interface
+- Navegador moderno
+- TypeScript instalado globalmente ou no ambiente do editor, caso queira recompilar
 
-- Estrutura principal em `index.html`
-- Secoes organizadas para marketing, produtos e relacionamento com o usuario
-- Conteudo visual pensado para destacar conversao e leitura rapida
+### Desenvolvimento
 
-### Estilo e comportamento
+Gere o JavaScript a partir do TypeScript, se necessario:
 
-- Estilos centralizados em `src/css/style.css`
-- Interacao de menu e comportamento visual em `src/ts/script.ts`
-- Build compilado para `dist/script.js`
+```bash
+tsc
+```
 
-## Como executar localmente
+Depois abra o arquivo:
 
-1. Gere o build do TypeScript.
-2. Abra o arquivo `index.html` no navegador.
+```txt
+index.html
+```
 
-Se preferir, voce tambem pode servir os arquivos com uma extensao de servidor local
-no editor para testar melhor a navegacao.
-
-## Objetivos de aprendizado demonstrados
-
-- Criacao de landing page responsiva
-- Estruturacao semantica com HTML
-- Estilizacao de interface com CSS
-- Interacao basica com JavaScript e TypeScript
-- Organizacao de projeto front-end para portifolio
-
-## Melhorias realizadas nesta versao
-
-- README reorganizado para apresentacao mais profissional
-- Estrutura do projeto documentada com mais clareza
-- Descricao de funcionalidades e objetivos alinhada ao portfolio
-- Padronizacao visual com os demais projetos do repositorio pessoal
+Tambem e possivel usar uma extensao de servidor local no editor para testar a pagina.
 
 ## Deploy
 
-Deploy atual do projeto:
+Deploy atual:
 
 [https://dogdev-fnovitchs-projects.vercel.app/](https://dogdev-fnovitchs-projects.vercel.app/)
 
+## Status
+
+Projeto concluido para portfólio, com foco em landing pages responsivas, composicao visual e interacao front-end basica.
